@@ -9,6 +9,7 @@ class App extends React.Component {
   videoRef = React.createRef();
   canvasRef = React.createRef();
 
+  
   componentDidMount() {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       const webCamPromise = navigator.mediaDevices
