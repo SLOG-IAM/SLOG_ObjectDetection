@@ -1,9 +1,14 @@
-import React from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom";
 
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import "@tensorflow/tfjs";
 import "./styles.css";
+import {ApexCharts, ReactApexChart} from 'apexcharts';
+import Chart from "react-apexcharts";
+import Basicbar from "./Components/Basicbar";
+import RadialChart from "./Components/RadialChart";
+
 
 class App extends React.Component {
   videoRef = React.createRef();
@@ -83,6 +88,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <text>Study LOG!!!</text>
         <video
           className="size"
           autoPlay
@@ -98,10 +104,18 @@ class App extends React.Component {
           width="600"
           height="500"
         />
+        <Basicbar/>
+        <RadialChart/>
       </div>
     );
   }
 }
+
+
+
+
+// const domContainer = document.querySelector('#app');
+// ReactDOM.render(React.createElement(RadialChart), domContainer);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
