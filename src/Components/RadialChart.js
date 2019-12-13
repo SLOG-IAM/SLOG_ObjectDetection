@@ -9,7 +9,7 @@ class RadialChart extends React.Component {
 
     this.state = {
       options: {
-        labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
+        labels: ['국어', '수학', '영어', '과학'],
         radialBar: {
           dataLabels: {
             name: {
@@ -29,7 +29,7 @@ class RadialChart extends React.Component {
           }
         }
       },
-      series: [44, 55, 67, 83],
+      series: [43, 55, 67, 83],
     }
   }
 
@@ -37,7 +37,7 @@ class RadialChart extends React.Component {
     return (
       <div>
         <div id="chart">
-          <Chart options={this.state.options} series={this.state.series} type="radialBar" height="350" />
+          <Chart options={this.state.options} series={this.state.series} type="radialBar" height="200" />
         </div>
         <div id="html-dist">
         </div>
